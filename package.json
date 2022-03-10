@@ -1,0 +1,27 @@
+{
+  "name": "jupiters-space",
+  "version": "1.0.0",
+  "description": "Jupiter's Blog",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JupiterIsis/jupiters-space.git"
+  },
+  "keywords": [],
+  "author": "Jupiter",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JupiterIsis/jupiters-space/issues"
+  },
+  "homepage": "https://github.com/JupiterIsis/jupiters-space#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.3",
+    "nodemon": "^2.0.15",
+    "sqlite": "^4.0.25",
+    "sqlite3": "^5.0.2"
+  }
+}
