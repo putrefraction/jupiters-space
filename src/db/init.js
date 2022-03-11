@@ -8,12 +8,15 @@ const initDb = {
         await db.exec(`CREATE TABLE IF NOT EXISTS posts (
             postId INTEGER PRIMARY KEY AUTOINCREMENT,
             title TEXT NOT NULL,
+            slug TEXT NOT NULL,
             subtitle TEXT,
-            date TEXT NOT NULL
+            date TEXT NOT NULL,
+            body TEXT NOT NULL
         )`)
 
         await db.close()
     }
+
 }
 
 initDb.init()
