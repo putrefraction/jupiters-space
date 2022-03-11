@@ -3,7 +3,7 @@ const Database = require("../db/config")
 // Reminder: create slugify function on post input, to throw into the database and use as URL reference
 
 module.exports = {
-async open(req, res){
+    async open(req, res){
         const db = await Database()
 
         
@@ -19,10 +19,20 @@ async open(req, res){
         const body = postContents.body
         
         if (date == postDate && postSlug == urlSlug){
-            res.render("post", {title: title, subtitle: subtitle, date:date, body:body})
+            res.render("main", {page:"post",title: title, subtitle: subtitle, date:date, body:body})
         } else {
             res.render("not-found")
         }
+
+    },
+
+    async index(req, res){
+        const db = await Database()
+
+        const posts = await db.all("SELECT * FROM posts")
+        const isPosts = posts.length > 0
+
+
 
     }
 }
