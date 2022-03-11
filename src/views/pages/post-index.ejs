@@ -1,0 +1,7 @@
+<section>
+    <% posts.forEach(post => { %>
+        <div class="post-entry">
+            <p><%= post.date%> - <a href="/blog/<%=post.date%>/<%=post.urlSlug%>"><%= post.title%></a></p>
+        </div>
+    <%})%>
+</section>

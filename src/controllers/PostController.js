@@ -32,7 +32,7 @@ module.exports = {
         const posts = await db.all("SELECT * FROM posts")
         const isPosts = posts.length > 0
 
-
+        res.render("main", {page:"post-index", posts: posts, isPosts: isPosts})
 
     }
 }
