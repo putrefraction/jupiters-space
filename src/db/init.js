@@ -5,13 +5,13 @@ const initDb = {
     async init(){
         const db = await Database()
 
-        await db.exec(`CREATE TABLE IF NOT EXISTS posts (
-            postId INTEGER PRIMARY KEY AUTOINCREMENT,
-            title TEXT NOT NULL,
-            slug TEXT NOT NULL,
-            subtitle TEXT,
-            date TEXT NOT NULL,
-            body TEXT NOT NULL
+        await db.exec(`CREATE TABLE posts (
+            "postId" INTEGER PRIMARY KEY AUTOINCREMENT,
+            "title" TEXT NOT NULL,
+            "urlSlug" TEXT NOT NULL,
+            "subtitle" TEXT,
+            "date" TEXT NOT NULL,
+            "body" TEXT NOT NULL
         )`)
 
         await db.close()
