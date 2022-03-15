@@ -19,8 +19,10 @@
   },
   "homepage": "https://github.com/JupiterIsis/jupiters-space#readme",
   "dependencies": {
+    "body-parser": "^1.19.2",
     "ejs": "^3.1.6",
     "express": "^4.17.3",
+    "express-session": "^1.17.2",
     "nodemon": "^2.0.15",
     "sqlite": "^4.0.25",
     "sqlite3": "^5.0.2"

@@ -1,4 +1,6 @@
 const express = require("express")
+const session = require("express-session")
+const bodyParser = require("body-parser")
 const route = require("./route")
 const path = require("path")
 
@@ -12,5 +14,13 @@ server.use(express.static("public"))
 server.use(express.urlencoded({"extended":true}))
 
 server.use(route)
+
+server.use(session({
+    secret:"thisisasecret",
+    saveUninitialized: false,
+    resave: false
+}))
+
+server.use(bodyParser.json())
 
 server.listen('3000', () => console.log("RUNNING AT PORT 3000"))
