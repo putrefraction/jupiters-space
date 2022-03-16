@@ -14,7 +14,6 @@ server.use(express.static("public"))
 
 server.use(express.urlencoded({"extended":true}))
 
-server.use(route)
 
 // 24hrs from milliseconds
 const oneDay = 1000 * 60 * 60 * 24
@@ -30,5 +29,6 @@ server.use(sessions({
 server.use(cookieParser())
 
 server.use(bodyParser.json())
+server.use(route)
 
 server.listen('3000', () => console.log("RUNNING AT PORT 3000"))

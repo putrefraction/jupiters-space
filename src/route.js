@@ -4,6 +4,8 @@ const route = express.Router()
 const PostController = require('./controllers/PostController')
 const SessionController = require('./controllers/SessionController')
 
+
+
 route.get('/', (req, res) => {res.render("main", {page: "home"})})
 
 route.get('/blog', PostController.index)

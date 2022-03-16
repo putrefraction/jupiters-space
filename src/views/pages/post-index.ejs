@@ -4,4 +4,7 @@
             <p><%= post.date%> - <a href="/blog/<%=post.date%>/<%=post.urlSlug%>"><%= post.title%></a></p>
         </div>
     <%})%>
+    <% if(session){ %>
+        <p>Welcome <%= session.userId%></p>
+    <% }%>
 </section>

@@ -6,8 +6,9 @@ module.exports = {
     // Selects and renders a specific post from the database, based on its slug
     async open(req, res){
         const db = await Database()
-
+        const session = req.session ? req.session : false;
         
+
         const postSlug = req.params.slug
         const postDate = req.params.date
         const postContents = await db.get(`SELECT * FROM posts WHERE "urlSlug" = "${postSlug}"`)
@@ -20,7 +21,7 @@ module.exports = {
         const body = postContents.body
         
         if (date == postDate && postSlug == urlSlug){
-            res.render("main", {page:"post",title: title, subtitle: subtitle, date:date, body:body})
+            res.render("main", {page:"post",title: title, subtitle: subtitle, date:date, body:body, session:session})
         } else {
             res.render("not-found")
         }
@@ -30,11 +31,12 @@ module.exports = {
     // Selects all posts from the database in order to create an index view at /blog
     async index(req, res){
         const db = await Database()
+        const session = req.session ? req.session : false;
 
         const posts = await db.all("SELECT * FROM posts")
         const isPosts = posts.length > 0
 
-        res.render("main", {page:"post-index", posts: posts, isPosts: isPosts})
+        res.render("main", {page:"post-index", posts: posts, isPosts: isPosts, session:session})
 
     }
 }
