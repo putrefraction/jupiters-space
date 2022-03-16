@@ -11,7 +11,12 @@ const initDb = {
             "urlSlug" TEXT NOT NULL,
             "subtitle" TEXT,
             "date" TEXT NOT NULL,
-            "body" TEXT NOT NULL
+            "body" TEXT NOT NULL 
+        )`)
+
+        await db.exec(`CREATE TABLE login (
+            user TEXT NOT NULL,
+            password TEXT NOT NULL
         )`)
 
         await db.close()

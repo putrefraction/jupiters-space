@@ -1,8 +1,9 @@
 const express = require("express")
-const session = require("express-session")
+const sessions = require("express-session")
 const bodyParser = require("body-parser")
 const route = require("./route")
 const path = require("path")
+const cookieParser = require("cookie-parser")
 
 const server = express()
 
@@ -15,11 +16,18 @@ server.use(express.urlencoded({"extended":true}))
 
 server.use(route)
 
-server.use(session({
+// 24hrs from milliseconds
+const oneDay = 1000 * 60 * 60 * 24
+
+//session middleware
+server.use(sessions({
     secret:"thisisasecret",
-    saveUninitialized: false,
-    resave: false
+    saveUninitialized:"true",
+    cookie: {maxAge:oneDay},
+    resave:"false"
 }))
+
+server.use(cookieParser())
 
 server.use(bodyParser.json())
 

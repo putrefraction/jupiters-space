@@ -3,6 +3,7 @@ const Database = require("../db/config")
 // Reminder: create slugify function on post input, to throw into the database and use as URL reference
 
 module.exports = {
+    // Selects and renders a specific post from the database, based on its slug
     async open(req, res){
         const db = await Database()
 
@@ -26,6 +27,7 @@ module.exports = {
 
     },
 
+    // Selects all posts from the database in order to create an index view at /blog
     async index(req, res){
         const db = await Database()
 
