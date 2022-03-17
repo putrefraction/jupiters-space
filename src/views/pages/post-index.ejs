@@ -1,10 +1,13 @@
 <section>
+    <%if(session.userId){ %>
+        <a href="/new-post">Create a new post</a> 
+    <%}%>
+
     <% posts.forEach(post => { %>
         <div class="post-entry">
-            <p><%= post.date%> - <a href="/blog/<%=post.date%>/<%=post.urlSlug%>"><%= post.title%></a></p>
+            <p><%= post.date.split(" ")[0]%> - <a href="/blog/<%=post.date.split(" ")[0]%>/<%=post.urlSlug%>"><%= post.title%></a></p>
         </div>
     <%})%>
-    <% if(session){ %>
-        <p>Welcome <%= session.userId%></p>
-    <% }%>
+
+
 </section>

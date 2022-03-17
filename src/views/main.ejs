@@ -8,7 +8,10 @@
 </head>
 <body>
     <header>
-        <h1>Welcome to Jupiter's Space</h1>
+        <h1>Welcome to <a href="/">Jupiter's Space</a></h1>
+        <% if(session.userId){ %>
+            <p>Welcome <%= session.userId%></p>
+        <% }%>
     </header>
     <nav>
         <div>Our beautiful nav bar</div>
