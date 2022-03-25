@@ -10,7 +10,9 @@ module.exports = {
         const pass = req.body.password
         const loginInfo = await db.get(`SELECT * FROM login where user = "${username}"`)
 
-        if(loginInfo.password === pass){
+        if(loginInfo === undefined){
+            console.log("user not found")
+        } else if(loginInfo.password === pass){
             session.userId = loginInfo.user
             
             res.redirect('/blog')

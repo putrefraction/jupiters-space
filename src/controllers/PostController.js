@@ -11,7 +11,6 @@ module.exports = {
         const postDate = req.params.date
         const postContents = await db.get(`SELECT * FROM posts WHERE "urlSlug" = "${postSlug}"`)
 
-        console.log(postContents)
         const title = postContents.title
         const urlSlug = postContents.urlSlug
         const subtitle = postContents.subtitle
@@ -19,7 +18,7 @@ module.exports = {
         const body = postContents.body
         
         if (date == postDate && postSlug == urlSlug){
-            res.render("main", {page:"post",title: title, subtitle: subtitle, date:date, body:body, session:req.session})
+            res.render("main", {page:"post",title: title, subtitle: subtitle, date:date, body:body, slug:urlSlug, session:req.session})
         } else {
             res.render("not-found")
         }
@@ -77,6 +76,15 @@ module.exports = {
         )`)
 
         res.redirect("/blog")
+
+    },
+
+    async edit(req, res){
+        const db = await Database()
+
+        const postSlug = req.params.slug
+        const postContents = await db.get(`SELECT * FROM posts WHERE "urlSlug" = "${postSlug}"`)
+        // TODO: Finish this
 
     }
 }

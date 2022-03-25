@@ -10,6 +10,7 @@ route.get('/', (req, res) => {res.render("main", {page: "home", session:req.sess
 
 route.get('/blog', PostController.index)
 route.get('/blog/:date/:slug', PostController.open)
+route.get('/blog/:date/:slug/edit', PostController.edit)
 
 route.get('/new-post', (req, res) => {res.render("main", {page: "new-post", session:req.session})})
 route.post('/new-post/submit', PostController.new)

@@ -1,4 +1,8 @@
 <section>
+    <% if(session.userId){ %>
+        <a href="/blog/<%=date%>/<%=slug%>/edit">Edit</a>
+        <button class="delete-post" id="delete">Delete</button>
+    <%}%>
     <h2><%= title %></h2>
     <h3><%= subtitle %></h3>
 
