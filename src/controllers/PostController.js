@@ -1,6 +1,5 @@
 const Database = require("../db/config")
 
-// Reminder: create slugify function on post input, to throw into the database and use as URL reference
 
 module.exports = {
     // Selects and renders a specific post from the database, based on its slug
@@ -20,6 +19,7 @@ module.exports = {
         if (date == postDate && postSlug == urlSlug){
             res.render("main", {page:"post",title: title, subtitle: subtitle, date:date, body:body, slug:urlSlug, session:req.session})
         } else {
+            res.status(404)
             res.render("not-found")
         }
 
@@ -35,7 +35,7 @@ module.exports = {
         res.render("main", {page:"post-index", posts: posts, isPosts: isPosts, session:req.session})
 
     },
-
+    // creates new post 
     async new(req, res){
         const db = await Database()
 
@@ -79,12 +79,19 @@ module.exports = {
 
     },
 
-    async edit(req, res){
+    async delete(req, res) {
         const db = await Database()
 
         const postSlug = req.params.slug
-        const postContents = await db.get(`SELECT * FROM posts WHERE "urlSlug" = "${postSlug}"`)
-        // TODO: Finish this
+        // delete post based on slug
+        await db.exec(`DELETE FROM posts WHERE urlSlug = "${postSlug}"`)
+
+        const posts = await db.all("SELECT * FROM posts")
+        const isPosts = posts.length > 0
+
+        res.render("main", {page:"post-index", posts: posts, isPosts: isPosts, session:req.session})
 
     }
+
+
 }
