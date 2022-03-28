@@ -1,6 +1,5 @@
+const { markdown } = require("markdown")
 const Database = require("../db/config")
-
-
 module.exports = {
     // Selects and renders a specific post from the database, based on its slug
     async open(req, res){
@@ -67,7 +66,7 @@ module.exports = {
         const postTitle = req.body.post_title
         const postSlug = slugify(postTitle)
         const postSubtitle = req.body.post_subtitle
-        const postBody = req.body.post_body
+        const postBody = markdown.toHTML(req.body.post_body)
 
         await db.exec(`INSERT INTO posts(title, urlSlug, subtitle, date, body) VALUES (
             "${postTitle}",

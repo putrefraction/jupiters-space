@@ -3,10 +3,10 @@
         <form action="/blog/<%= date %>/<%= slug %>/delete" method="post">
             <button type="submit">Delete this post</button>
         </form>
-    <%}%>
+        <%}%>
     <h2><%= title %></h2>
     <h3><%= subtitle %></h3>
 
     <p><%= date %></p>
-    <p><%= body %></p>
+    <div><%=body%></div>
 </section>
