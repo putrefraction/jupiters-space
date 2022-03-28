@@ -13,7 +13,7 @@ module.exports = {
         const title = postContents.title
         const urlSlug = postContents.urlSlug
         const subtitle = postContents.subtitle
-        const date = postContents.date.split(" ")[0]
+        const date = postContents.date
         const body = postContents.body
         
         if (date == postDate && postSlug == urlSlug){
@@ -29,7 +29,9 @@ module.exports = {
     async index(req, res){
         const db = await Database()
 
-        const posts = await db.all("SELECT * FROM posts")
+
+        
+        const posts = await db.all("SELECT * FROM posts") 
         const isPosts = posts.length > 0
 
         res.render("main", {page:"post-index", posts: posts, isPosts: isPosts, session:req.session})
@@ -71,7 +73,7 @@ module.exports = {
             "${postTitle}",
             "${postSlug}",
             "${postSubtitle}",
-            datetime("now","localtime"),
+            date("now","localtime"),
             "${postBody}"
         )`)
 
@@ -86,6 +88,7 @@ module.exports = {
         // delete post based on slug
         await db.exec(`DELETE FROM posts WHERE urlSlug = "${postSlug}"`)
 
+        //copying the index function because I can't reference it, lmao
         const posts = await db.all("SELECT * FROM posts")
         const isPosts = posts.length > 0
 
