@@ -5,28 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <script src="/scripts/markdownHandler.js" defer></script>
-
+    <link rel="stylesheet" type="text/css" href="/styles/global.css">
 
     <title>Jupiter's Space</title>
-</head>
+</head> 
 <body>
-    <header>
-        <h1>Welcome to <a href="/" id="Jupiter">Jupiter's Space</a></h1>
-        <% if(session.userId){ %>
-            <p>Welcome <%= session.userId%></p>
-        <% }%>
-    </header>
-    <nav>
-        <div>Our beautiful nav bar</div>
-    </nav>
-    <main>
-        <div class="container">
-            <%- include(`pages/${page}`)%>
-        </div>
-    </main>
-    <footer>
-        <div>Our delicious feet</div>
-    </footer>
+    <div class="content">
+        <header class="container">
+            <div class="banner">
+                <img src="" alt="">
+                <h1>Welcome to <a href="/" id="Jupiter">Jupiter's Space</a></h1>
+            <% if(session.userId){ %>
+                <p>Welcome <%= session.userId%></p>
+            <% }%>
+            </div>
+            
+        </header>
+        <nav class="container">
+            <ul>
+                <li><a href="/">Jupiter</a></li>
+                <li><a href="/resume">Resume</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="/blog">Blog</a></li>
+
+            </ul>
+        </nav>
+        <main class="container">
+            <div class="container">
+                <%- include(`pages/${page}`)%>
+            </div>
+        </main>
+        <footer class="container">
+            <p><a href="#">Buy me a coffee!</a></p>
+        </footer>
+    </div>  
 </body>
+
 </html>

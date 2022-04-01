@@ -1,4 +1,3 @@
-const { markdown } = require("markdown")
 const Database = require("../db/config")
 module.exports = {
     // Selects and renders a specific post from the database, based on its slug
