@@ -8,7 +8,7 @@
 </head>
 <body>
     <section>
-        <form action="/admin/login" method="POST">
+        <form action="/admin/login" method="POST" onsubmit="() => {}">
             <h2>JUPITER</h2>
             <div class="input-field">
                 <input type="text" name="username" id="username" placeholder="Username">
@@ -16,6 +16,8 @@
             <div class="input-field">
                 <input type="password" name="password" id="password" placeholder="Password">
             </div>
+
+            <div id="warning-pass"><p>Password or username incorrect</p></div>
             <input type="submit" value="Login">
         </form>
     </section>
