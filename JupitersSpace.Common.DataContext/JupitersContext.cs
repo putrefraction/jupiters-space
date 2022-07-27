@@ -1,10 +1,16 @@
 ﻿using Microsoft.EntityFrameworkCore; //DbContext, DbContextOptionsBuilder
 
 namespace JupitersSpace.Shared;
-public class JupitersSpace : DbContext
+public class JupitersContext : DbContext
 {
+    public JupitersContext()
+    {
+    }
 
-
+    public JupitersContext(DbContextOptions<JupitersContext> options)
+        : base(options)
+    { 
+    }
     // maps to tables in the database
     public DbSet<Post>? Posts { get; set; }
     protected override void OnConfiguring(
@@ -14,6 +20,6 @@ public class JupitersSpace : DbContext
         string path = Path.Combine(
             Environment.CurrentDirectory, "JupitersSpace.db");
         
-        optionsBuilder.UseSqlite(path);
+        optionsBuilder.UseSqlite($"Filename={path}");
     }
 }

@@ -1,0 +1,14 @@
+@using JupitersSpace.Shared;
+@model PostsIndexViewModel
+@{
+    ViewData["Title"] = "Jupiter's Posts";
+}
+<div>
+<h1 class="display-4">My posts</h1>
+<ul>
+@foreach (Post p in Model.Posts)
+{
+    <li>@p.Title</li>
+}
+</ul>
+</div>
