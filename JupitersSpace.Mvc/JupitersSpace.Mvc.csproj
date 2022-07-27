@@ -6,7 +6,10 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="CommonMark.NET" Version="0.15.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.0" />
+    <PackageReference Include="CommonMark.NET" />
+
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="../JupitersSpace.Common.DataContext/JupitersSpace.Common.DataContext.csproj" />

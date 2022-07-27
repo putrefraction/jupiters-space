@@ -1,10 +1,11 @@
-
+using JupitersSpace.Shared;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
+builder.Services.AddJupitersContext();
 
 var app = builder.Build();
 
@@ -19,7 +20,7 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
-app.UseRouting();ff
+app.UseRouting();
 
 app.UseAuthorization();
 
@@ -27,6 +28,10 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
+app.MapControllerRoute(
+    name: "postView",
+    pattern: "posts/{slug?}",
+defaults: new{controller = "Posts", Action = "Post"});
 app.MapRazorPages();
 
 app.Run();

@@ -13,13 +13,13 @@ public class JupitersContext : DbContext
     }
     // maps to tables in the database
     public DbSet<Post>? Posts { get; set; }
-    protected override void OnConfiguring(
-        DbContextOptionsBuilder optionsBuilder
-    )
-    {
-        string path = Path.Combine(
-            Environment.CurrentDirectory, "JupitersSpace.db");
+    // protected override void OnConfiguring(
+    //     DbContextOptionsBuilder optionsBuilder
+    // )
+    // {
+    //     string path = Path.Combine(
+    //         Environment.CurrentDirectory, "JupitersStuff.db");
         
-        optionsBuilder.UseSqlite($"Filename={path}");
-    }
+    //     optionsBuilder.UseSqlite($"Filename=../{path}");
+    // }
 }

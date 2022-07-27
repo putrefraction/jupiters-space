@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "03vLyJNn8FB4/vFjZFJo9CU+O2tsWUlLSf72ZixQTwqffhIYIADgITzeFuS1ILT2Qd+mynInZGkx6CgEWqL0Rg==",
+  "dgSpecHash": "wXH0aXicxRbR+wCefqh9X0wx1O9qts8dp0r6xx4xfCbQ9F1Iu59fqdoFO3DJzbPa/UJpAoGU2A/w+Gv5PAVamg==",
   "success": true,
   "projectFilePath": "/home/faura/Documents/Code/jupiters-space/JupitersSpace.Mvc/JupitersSpace.Mvc.csproj",
   "expectedPackageFiles": [
+    "/home/faura/.nuget/packages/commonmark.net/0.15.1/commonmark.net.0.15.1.nupkg.sha512",
     "/home/faura/.nuget/packages/microsoft.data.sqlite.core/6.0.0/microsoft.data.sqlite.core.6.0.0.nupkg.sha512",
     "/home/faura/.nuget/packages/microsoft.entityframeworkcore/6.0.0/microsoft.entityframeworkcore.6.0.0.nupkg.sha512",
     "/home/faura/.nuget/packages/microsoft.entityframeworkcore.abstractions/6.0.0/microsoft.entityframeworkcore.abstractions.6.0.0.nupkg.sha512",

@@ -51,3 +51,4 @@
 /home/faura/Documents/Code/jupiters-space/JupitersSpace.Mvc/obj/Debug/net6.0/JupitersSpace.Mvc.csproj.CopyComplete
 /home/faura/Documents/Code/jupiters-space/JupitersSpace.Mvc/bin/Debug/net6.0/JupitersSpace.Common.DataContext.dll
 /home/faura/Documents/Code/jupiters-space/JupitersSpace.Mvc/bin/Debug/net6.0/JupitersSpace.Common.DataContext.pdb
+/home/faura/Documents/Code/jupiters-space/JupitersSpace.Mvc/bin/Debug/net6.0/CommonMark.dll
