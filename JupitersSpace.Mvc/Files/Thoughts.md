@@ -16,6 +16,11 @@ Things I've understood:
   - In finding people who support you and getting them into your circle you avoid people who drag you down, diminishing the amount of effort you make policing yourself.
 - [Showing yourself off is good for quality](http://visakanv.com/marketing/solve-for-distribution/)
 
+    fjdkfjksafçjçaksfjfsaf
+    fdfdsakfjasfhlasjdfklasf
+    fdjsahfklasjfhkjadfhkjsdfhkas
+    jfkdsahfjkldsahflhasdfjgahfg
+
 Username ideas:
 Cool usernames:
 - \_kntsugi\_

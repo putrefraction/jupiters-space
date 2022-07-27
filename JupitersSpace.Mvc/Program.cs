@@ -32,6 +32,5 @@ app.MapControllerRoute(
     name: "postView",
     pattern: "posts/{slug?}",
 defaults: new{controller = "Posts", Action = "Post"});
-app.MapRazorPages();
 
 app.Run();

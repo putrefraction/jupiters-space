@@ -20,7 +20,7 @@ public class PostsController : Controller
     {
 
         PostsIndexViewModel model = new(
-            Posts: await db.Posts.OrderBy(p => p.PostId).ToListAsync()
+            Posts: await db.Posts.OrderByDescending(p => p.PostId).ToListAsync()
         );
         return View(model);
     }
