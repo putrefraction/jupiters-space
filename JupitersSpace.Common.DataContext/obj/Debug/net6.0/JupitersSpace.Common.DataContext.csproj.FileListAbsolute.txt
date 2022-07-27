@@ -1,0 +1,12 @@
+/home/faura/Documents/Code/jupiters-space/JupitersSpace.Common.DataContext/bin/Debug/net6.0/JupitersSpace.Common.DataContext.deps.json
+/home/faura/Documents/Code/jupiters-space/JupitersSpace.Common.DataContext/bin/Debug/net6.0/JupitersSpace.Common.DataContext.dll
+/home/faura/Documents/Code/jupiters-space/JupitersSpace.Common.DataContext/bin/Debug/net6.0/JupitersSpace.Common.DataContext.pdb
+/home/faura/Documents/Code/jupiters-space/JupitersSpace.Common.DataContext/obj/Debug/net6.0/JupitersSpace.Common.DataContext.csproj.AssemblyReference.cache
+/home/faura/Documents/Code/jupiters-space/JupitersSpace.Common.DataContext/obj/Debug/net6.0/JupitersSpace.Common.DataContext.GeneratedMSBuildEditorConfig.editorconfig
+/home/faura/Documents/Code/jupiters-space/JupitersSpace.Common.DataContext/obj/Debug/net6.0/JupitersSpace.Common.DataContext.AssemblyInfoInputs.cache
+/home/faura/Documents/Code/jupiters-space/JupitersSpace.Common.DataContext/obj/Debug/net6.0/JupitersSpace.Common.DataContext.AssemblyInfo.cs
+/home/faura/Documents/Code/jupiters-space/JupitersSpace.Common.DataContext/obj/Debug/net6.0/JupitersSpace.Common.DataContext.csproj.CoreCompileInputs.cache
+/home/faura/Documents/Code/jupiters-space/JupitersSpace.Common.DataContext/obj/Debug/net6.0/JupitersSpace.Common.DataContext.dll
+/home/faura/Documents/Code/jupiters-space/JupitersSpace.Common.DataContext/obj/Debug/net6.0/refint/JupitersSpace.Common.DataContext.dll
+/home/faura/Documents/Code/jupiters-space/JupitersSpace.Common.DataContext/obj/Debug/net6.0/JupitersSpace.Common.DataContext.pdb
+/home/faura/Documents/Code/jupiters-space/JupitersSpace.Common.DataContext/obj/Debug/net6.0/ref/JupitersSpace.Common.DataContext.dll
